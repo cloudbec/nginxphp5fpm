@@ -14,7 +14,7 @@ ADD www.conf /etc/php5/fpm/pool.d/www.conf
 
 RUN mkdir -p /var/www/html && chown www-data:www-data /var/www/html
 
-RUN echo "<?php phpinfo();" > /var/www/html/index.php
+RUN echo "<h1>title</h1>  <?php phpinfo();" > /var/www/html/index.php
 
 RUN chown -R www-data:www-data /var/www/html
 
