@@ -11,6 +11,7 @@ ADD nginx_default /etc/nginx/sites-available/default
 ADD supervisor_nginx.conf /etc/supervisor/conf.d/nginx.conf
 ADD supervisor_php5fpm.conf /etc/supervisor/conf.d/php5fpm.conf 
 ADD www.conf /etc/php5/fpm/pool.d/www.conf
+ADD php.ini /etc/php5/fpm/conf.d/php.ini
 
 RUN mkdir -p /var/www/html && chown www-data:www-data /var/www/html
 
