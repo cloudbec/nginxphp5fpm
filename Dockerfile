@@ -3,7 +3,7 @@ MAINTAINER David Tremblay <david@nuagebec.ca>
 
 #install php5fpm
 RUN apt-get update && apt-get upgrade -y && \
-    apt-get install -y php5-fpm php5-mysql php5-gd supervisor mysql-client nginx && \
+    apt-get install -y php5-fpm php5-mysql php5-gd php5-curl supervisor mysql-client nginx && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
