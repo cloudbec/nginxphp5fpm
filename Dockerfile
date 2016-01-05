@@ -12,6 +12,8 @@ ADD supervisor_nginx.conf /etc/supervisor/conf.d/nginx.conf
 ADD supervisor_php5fpm.conf /etc/supervisor/conf.d/php5fpm.conf 
 ADD www.conf /etc/php5/fpm/pool.d/www.conf
 ADD php.ini /etc/php5/fpm/conf.d/php.ini
+RUN sed  '/"pid \/run\/nginx.pid;"/daemon off;' /etc/nginx/nginx.conf
+
 
 RUN mkdir -p /var/www/html && chown www-data:www-data /var/www/html
 
